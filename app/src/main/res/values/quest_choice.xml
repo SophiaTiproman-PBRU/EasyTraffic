@@ -21,14 +21,14 @@
     </string-array>
     <string-array name="times4">
         <item>ห้ามเลี้ยวซ้าย</item>
-        <item>ห้ามเลี้ยวขวา</item>
-        <item>ให้ตรงไป</item>
         <item>ให้เลี้ยวซ้าย</item>
+        <item>ให้ตรงไป</item>
+        <item>ให้เลี้ยวขวา</item>
     </string-array>
     <string-array name="times5">
-        <item>ให้เลี้ยวขวา</item>
-        <item>ห้ามเลี้ยวขวา</item>
         <item>ให้เลี้ยวซ้าย</item>
+        <item>ห้ามเลี้ยวขวา</item>
+        <item>ให้เลี้ยวขวา</item>
         <item>ห้ามเลี้ยวซ้าย</item>
     </string-array>
     <string-array name="times6">

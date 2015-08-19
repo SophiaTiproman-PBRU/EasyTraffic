@@ -1,5 +1,8 @@
 package pbru.tohraman.porntip.easytraffic;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -23,7 +26,7 @@ public class TestActivity extends AppCompatActivity {
     private String[] questionStrings;
     private int[] imageInts;
 
-    private int radioAnInt, intdexAnInt;
+    private int radioAnInt, intdexAnInt, scoreAnInt;
 
 
     @Override
@@ -44,6 +47,7 @@ public class TestActivity extends AppCompatActivity {
         if (radioAnInt == 0) {
             Toast.makeText(TestActivity.this, "Answer Please", Toast.LENGTH_SHORT).show();
         } else {
+            checkScore();
             myModel();
         }
 
@@ -57,16 +61,31 @@ public class TestActivity extends AppCompatActivity {
 
         } else {
 
+            //Check Score
+            //checkScore();
+
             intdexAnInt += 1;
 
             //Change View
             changeView(intdexAnInt);
+            choiceRadioGroup.clearCheck();
+
+            //Change Image
             changeImage(intdexAnInt);
+
+            //Change Choice
             changeChoice(intdexAnInt);
 
         }
 
     }   //myModel
+
+    private void checkScore() {
+        int[] intTrueAnswer = {1, 2, 3, 4, 1, 2, 3, 4, 1, 2};
+        if (radioAnInt == intTrueAnswer[intdexAnInt]) {
+            scoreAnInt++;
+        }
+    }
 
     private void changeChoice(int anInt) {
 
@@ -98,6 +117,29 @@ public class TestActivity extends AppCompatActivity {
     }   //changeView
 
     private void showAnswerDialog() {
+
+        AlertDialog.Builder objBuilder = new AlertDialog.Builder(this);
+        objBuilder.setIcon(R.drawable.icon_myaccount);
+        objBuilder.setTitle("Your Score");
+        objBuilder.setMessage("You get " + Integer.toString(scoreAnInt) + " points");
+        objBuilder.setCancelable(false);
+        objBuilder.setNegativeButton("Play Again", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                onStart();
+                dialog.dismiss();
+
+            }
+        });
+        objBuilder.setPositiveButton("Read Again", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Intent objIntent = new Intent((TestActivity.this), MainActivity.class);
+                startActivity(objIntent);
+                dialog.dismiss();
+            }
+        });
+        objBuilder.show();
 
     }   //showAnswerDialog
 
@@ -148,6 +190,9 @@ public class TestActivity extends AppCompatActivity {
         imageInts[7] = R.drawable.traffic_08;
         imageInts[8] = R.drawable.traffic_09;
         imageInts[9] = R.drawable.traffic_10;
+
+        intdexAnInt = 0;
+        scoreAnInt = 0;
 
         String[] strChoice = getResources().getStringArray(R.array.times1);
 
