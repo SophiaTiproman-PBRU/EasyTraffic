@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         strTitle[10] = "ทางแยก";
         strTitle[11] = "ห้ามกลับรถ";
         strTitle[12] = "ห้ามจอด";
-        strTitle[13] = "รถสวน";
+        strTitle[13] = "รถวิ่งสวนทาง";
         strTitle[14] = "ห้ามแซง";
         strTitle[15] = "เข้า";
         strTitle[16] = "หยุดตรวจ";

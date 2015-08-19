@@ -26,22 +26,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="New Text"
-            android:id="@+id/textView2"
+            android:id="@+id/txtQuestion"
             android:textSize="@dimen/h2"
-            android:textColor="#ffffff" />
+            android:textColor="#ffffff"
+            android:layout_marginTop="10dp" />
 
         <ImageView
             android:layout_width="@dimen/image"
             android:layout_height="@dimen/image"
-            android:id="@+id/imageView"
+            android:id="@+id/imvTrafficTest"
             android:layout_gravity="center_horizontal"
             android:layout_margin="20dp" />
 
         <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/ragChoice"
             android:layout_gravity="center_horizontal"
-            android:background="#7fffffff">
+            android:background="#7fffffff"
+            android:paddingLeft="20dp"
+            android:paddingRight="50dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
 
             <RadioButton
                 android:layout_width="wrap_content"
@@ -66,15 +72,8 @@
                 android:layout_height="wrap_content"
                 android:text="New RadioButton"
                 android:id="@+id/radioButton4" />
-        </RadioGroup><![CDATA[
-
-        TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/what"
-            android:id="@+id/textView2"
-            android:textSize="@dimen/h1" />
-    ]]>
+        </RadioGroup>
+        
     </LinearLayout>
 
     <Button
