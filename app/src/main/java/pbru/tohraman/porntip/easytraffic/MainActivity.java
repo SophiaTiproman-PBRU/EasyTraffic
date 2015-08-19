@@ -23,13 +23,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Initial Widget >> link traffice listview with trafficListView variable
-        initialWidget();     // Ctrl+Shift+Enter to fill in ;
+        initialWidget();     // Ctrl+Shift+Enter to complete
 
         //Create ListView
         createListView();
 
 
     }   // Main Method
+
+    //create method that can call from outside >> public
+    public void clickTest(View view) {
+        startActivity(new Intent(this, TestActivity.class));
+    }
 
     private void createListView() {
 

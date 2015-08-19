@@ -13,7 +13,8 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_margin="20dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -32,12 +33,13 @@
             android:layout_marginTop="40dp" />
 
         <ScrollView
-            android:layout_width="@dimen/image"
-            android:layout_height="100dp"
+            android:layout_width="@dimen/list"
+            android:layout_height="200dp"
             android:id="@+id/scrollView"
             android:layout_gravity="center_horizontal"
-            android:background="#7fd595f9"
-            android:padding="10dp">
+            android:padding="10dp"
+            android:background="#7fffffff"
+            android:layout_marginTop="15dp">
 
             <TextView
                 android:layout_width="wrap_content"
